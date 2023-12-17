@@ -8,7 +8,7 @@ class CarPricePredictor:
         weights_path = pkg_resources.resource_filename('CarPricePredictor', 'weights.json')
         self.model = xgb.Booster()
         self.model.load_model(weights_path)
-        logging.log(msg="Model loaded.")
+        logging.log(level=1, msg="Model loaded.")
 
     def predict_single_input(self, input):
         """
