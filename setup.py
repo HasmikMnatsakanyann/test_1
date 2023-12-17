@@ -9,7 +9,14 @@ setup(
     long_description_content_type='text/markdown',
     author='Hasmik Mnatsakanyan',
     author_email='hasmik.mnatsakanyan2000@gmail.com',
-    url='https://github.com/yourusername/my_package',
+    url='https://github.com/HasmikMnatsakanyann/test_1/tree/main',
     package_data={"CarPricePredictor": ["weights/*"]},
     include_package_data=True,
+    install_requires=[
+        'pandas==2.1.4',
+        'scikit-learn==1.3.2',
+        'xgboost==2.0.2',
+        'numpy==1.26.2',
+        'torch==2.1.2'
+    ]
 )
