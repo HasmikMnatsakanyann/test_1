@@ -1,12 +1,14 @@
 import xgboost as xgb
 import pkg_resources
 from .preprocess import preprocess_single_input
+import logging
 
 class CarPricePredictor:
     def __init__(self):
         weights_path = pkg_resources.resource_filename('CarPricePredictor', 'car_price_prediction_model_weoghts.json')
         self.model = xgb.Booster()
         self.model.load_model(weights_path)
+        logging.log(msg="Model loaded.")
 
     def predict_single_input(self, input):
         """
