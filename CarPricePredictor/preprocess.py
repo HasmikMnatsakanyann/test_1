@@ -115,7 +115,7 @@ def preprocess_single_input(input_dict):
 
     inp = np.concatenate((year, mileage, car_one_hoted, Vehicle_type_one_hoted, wheel_one_hoted, color_one_hoted, transmission_one_hoted, ))
     
-    return inp
+    return inp.reshape(1, -1)
 
 
 def preprocess_dataframe(df):
