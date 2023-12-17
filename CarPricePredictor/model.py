@@ -24,18 +24,19 @@ class CarPricePredictor:
         Input: Dict as shown in example
         usage example :
         sample = {
-                "Car": ["Toyota Camry", "Honda Accord"],
-                "Vehicle Type": ["Sedan", "Sedan"],
-                "Wheel left/right": ["Left", "Right"],
-                "Color": ["Red", "Blue"],
-                "Transmission": ["Automatic", "Manual"],
-                "Mileage": [50000, 30000],
-                "Year": [2018, 2019]
+"Car": "Toyota Camry",
+"Vehicle Type": "Sedan",
+"Wheel left/right": "Left",
+"Color": "Red",
+"Transmission": "Automatic",
+"Mileage": 50000,
+"Year": 2018
             }
         price_predictor = CarPricePredictor()
         predicted_price = price_predictor.predict_single_input(sample)
         """
         preprocessed_input = preprocess_single_input(input)
-        predictions = self.model.predict(preprocessed_input)
+        dmat_data = xgb.DMatrix(preprocessed_input)
+        predictions = self.model.predict(dmat_data)
         return predictions
 
