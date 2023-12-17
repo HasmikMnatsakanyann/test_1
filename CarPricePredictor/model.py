@@ -4,7 +4,7 @@ from .preprocess import preprocess_single_input
 
 class CarPricePredictor:
     def __init__(self):
-        weights_path = pkg_resources.resource_filename('CarPricePredictor', 'xgboost_weights.json')
+        weights_path = pkg_resources.resource_filename('CarPricePredictor', 'car_price_prediction_model_weoghts.json')
         self.model = xgb.Booster()
         self.model.load_model(weights_path)
 
