@@ -35,4 +35,3 @@ if st.button('Predict Price'):
     except Exception as e:
         st.error(f'Error: {e}')
 
-# Run the Streamlit app with `streamlit run app.py`

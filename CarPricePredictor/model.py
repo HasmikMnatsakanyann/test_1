@@ -1,6 +1,6 @@
 import xgboost as xgb
 import pkg_resources
-from .preprocess import preprocess_single_input
+from preprocess import preprocess_single_input
 import logging
 
 class CarPricePredictor:
