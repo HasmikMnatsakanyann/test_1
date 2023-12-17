@@ -1,8 +1,4 @@
-import pandas as pd
 import numpy as np
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder, StandardScaler, OrdinalEncoder
-from config import DataConfig
 
 
 Vehicle_Type_DICT = {'Sedan': 0,
