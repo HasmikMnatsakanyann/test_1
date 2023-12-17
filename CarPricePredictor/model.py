@@ -1,9 +1,9 @@
 import xgboost as xgb
-from preprocessing import preprocess_input
 import pkg_resources
 
 class CarPricePredictor:
     def __init__(self):
+        import pdb; pdb.set_trace()
         weights_path = pkg_resources.resource_filename('CarPricePredictor', 'xgboost_weights.json')
         print(weights_path)
         self.model = xgb.Booster()
