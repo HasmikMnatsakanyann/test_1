@@ -10,7 +10,7 @@ setup(
     author='Hasmik Mnatsakanyan',
     author_email='hasmik.mnatsakanyan2000@gmail.com',
     url='https://github.com/HasmikMnatsakanyann/test_1/tree/main',
-    package_data={"CarPricePredictor": ["weights/*"]},
+    package_data={"CarPricePredictor": ["weights.json"]},
     include_package_data=True,
     install_requires=[
         'pandas==2.1.4',
